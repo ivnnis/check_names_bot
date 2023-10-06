@@ -28,7 +28,7 @@ def handle_forwarded_message(message):
                     # Записываем новое упоминание в файл
                     file.write(author_username + '\n')
                 else:
-                    bot.send_message(message.chat.id, f"Предупреждение: {author_username} уже был упомянут в этом чате.")
+                    bot.send_message(message.chat.id, f"Предупреждение: {author_username} уже был.")
                     # Если упоминание уже есть, не записываем его в файл
     except Exception as e:
         print(f"Ошибка при обработке пересылаемого сообщения: {e}")
